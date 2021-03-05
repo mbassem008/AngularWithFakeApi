@@ -1,0 +1,64 @@
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-9 mx-auto text-center">
+                <h1 class="text-white" style="padding-top: 60px;">Matchs</h1>
+                <div class="site-section bg-dark">
+                    <div class="container">
+                        <div class="row"> 
+                 
+                            <div class="col-lg-12">
+                
+                                <div class="widget-next-match">
+                                    <table class="table custom-table">
+                                        <thead>
+                                            <!-- <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Age</th>
+                                                <th>Number</th>
+                                                <th>Poste</th>
+                                                <th>Team</th>
+                                            </tr> -->
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>team1</th>
+                                                <th>team2</th>
+                                                <th>score1</th>
+                                                <th>score2</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr  *ngFor='let m of match'>
+                                                <td>{{m.id}}</td>
+                                                <td>{{m.team1}}</td>
+                                                <td>{{m.team2}}</td>
+                                                <td>{{m.score1}}</td> 
+                                                <td>{{m.score2}}</td>
+                                                <td>
+                                                    <button class="btn btn-success" (click)="goToMatch(m.id)">Display</button>
+                                                    <button class="btn btn-warning" (click)="editTheMatch(m.id)" >Edit</button>
+                                                    <button class="btn btn-danger" (click)="deleteMatch(m.id)">Delete</button>
+                                                </td>
+                                            </tr> 
+
+                
+                                        </tbody>
+                                    </table>
+                                </div>
+                
+                            </div>
+                        </div>
+                    </div>
+                    <div >
+                        <button type="button" class="btn btn-primary" (click)="addMatch()" >Add Match</button>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
